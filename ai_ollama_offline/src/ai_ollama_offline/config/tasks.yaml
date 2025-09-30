@@ -1,0 +1,18 @@
+research_task:
+  description: >
+    Read key files from the knowledge/ folder about {topic}.
+    Use the directory-reading tool to open files and extract only the most relevant points.
+    Summarize briefly and end each bullet with the file reference in the format (file:filename.ext).
+    Do not invent facts not present in the files.
+  expected_output: >
+    5 concise bullets grounded ONLY in local files, each ending with (file:filename.ext).
+  agent: researcher
+
+reporting_task:
+  description: >
+    Turn the bullet summary into a structured markdown report (Introduction, Key Findings, Implications, Next Steps).
+    Keep all claims grounded in the provided bullets/files and include the (file:...) references inline.
+    Add a short "Sources" section listing the file names used.
+  expected_output: >
+    A clear markdown report grounded in local files only, with inline (file:...) references and a final Sources list.
+  agent: reporting_analyst

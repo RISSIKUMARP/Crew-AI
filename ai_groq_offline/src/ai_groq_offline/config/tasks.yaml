@@ -1,0 +1,18 @@
+ingest:
+  description: >
+    Read key files from the knowledge/ folder about AI Agents.
+    Use the DirectoryReadTool to open files and extract only the most relevant points.
+    Summarize briefly and include file references inline in the format (file:filename.ext).
+    Do not invent facts not present in the files.
+  expected_output: >
+    5 concise bullets grounded ONLY in local files, each bullet ending with (file:filename.ext).
+  agent: reader
+
+writeup:
+  description: >
+    Turn the bullet summary into a structured markdown report (Introduction, Key Findings, Implications, Next Steps).
+    Keep all claims grounded in the provided bullets and files.
+    Include a short "Sources" section at the end listing the file names used.
+  expected_output: >
+    A clear markdown report grounded in local files only, with inline (file:...) references and a final Sources list.
+  agent: reporter

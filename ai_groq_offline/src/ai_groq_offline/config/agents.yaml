@@ -1,0 +1,15 @@
+reader:
+  role: "Local Knowledge Reader"
+  goal: "Extract key facts from local files about AI Agents"
+  backstory: "You only use local materials."
+  llm: groq/llama-3.1-8b-instant
+  temperature: 0.1
+  max_tokens: 400
+
+reporter:
+  role: "Local Knowledge Reporter"
+  goal: "Write a grounded summary citing file names/sections"
+  backstory: "You avoid unsourced claims."
+  llm: groq/llama-3.1-70b-versatile
+  temperature: 0.1
+  max_tokens: 900
