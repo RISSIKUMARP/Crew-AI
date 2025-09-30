@@ -1,0 +1,16 @@
+research:
+  description: >
+    Use web tools to research AI Agents (year 2025). 
+    Use at most 3 sources. When scraping a page, summarize briefly; do NOT paste long passages.
+    For each bullet,include a markdown link to a credible source you actually used.
+  expected_output: >
+    5 bullets. Each ends with [source](url).
+  agent: researcher
+
+report:
+  description: >
+    Expand the bullets into a markdown report with sections and inline links.
+    Avoid speculation; keep all claims traceable to the cited sources.
+  expected_output: >
+    A well-structured markdown report with references.
+  agent: reporter

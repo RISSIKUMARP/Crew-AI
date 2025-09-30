@@ -1,0 +1,21 @@
+researcher:
+  role: "AI Agents Web Researcher"
+  goal: "Find fresh, credible info on AI Agents in 2025 with citations"
+  backstory: "You search and read web sources before answering."
+  llm: groq/llama-3.1-8b-instant
+  temperature: 0.1
+  #Lower (0.0–0.2) - more deterministic, terse, safer for research & summaries.
+
+  # Higher (0.7+) - more creative/varied wording (also more risk of drift). 
+  
+  max_tokens: 400
+  #Smaller value = cheaper/faster and less chance to exceed per-minute token limits.
+  #Note: total tokens = input (your prompt + tool text + history) + output.
+
+reporter:
+  role: "Report Analyst"
+  goal: "Write a clear report with inline links"
+  backstory: "You synthesize findings, keep it concise and grounded."
+  llm: groq/llama-3.1-70b-versatile
+  temperature: 0.2
+  max_tokens: 900
